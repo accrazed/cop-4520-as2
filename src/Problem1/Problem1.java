@@ -1,3 +1,5 @@
+package Problem1;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -77,7 +79,7 @@ class Maze {
 
     Cupcake Traverse() throws InterruptedException {
         // Go through maze
-        // long traverseTime = (long) Math.random() * 100;
+        // long traverse = (long) Math.random() * 100;
         // Thread.sleep(traverseTime);
 
         return this.cupcake;

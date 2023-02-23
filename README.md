@@ -24,25 +24,21 @@ extra delay time would outperform constant fast index checking.
 
 ### Exponential backoff lock times
 
-`java Problem1 30`
-`11.03s user 5.46s system 203% cpu 8.100 total`
-`9.52s user 7.54s system 363% cpu 4.698 total`
-`12.82s user 6.47s system 226% cpu 8.530 total`
+```sh
+java Problem1 30
+11.03s user 5.46s system 203% cpu 8.100 total
+9.52s user 7.54s system 363% cpu 4.698 total
+12.82s user 6.47s system 226% cpu 8.530 total
+```
 
 ### Random constant lock runtimes
 
-`java Problem1 30`
-`0.94s user 0.20s system 138% cpu 0.826 total`
-`1.05s user 0.06s system 122% cpu 0.905 total`
-`0.96s user 0.08s system 123% cpu 0.844 total`
-
-### How To Run
-
-Run the following commands:
-
-`cd src && javac Problem1.java`
-
-`java Problem1 <number_of_guests>`
+```sh
+java Problem1 30
+0.94s user 0.20s system 138% cpu 0.826 total
+1.05s user 0.06s system 122% cpu 0.905 total
+0.96s user 0.08s system 123% cpu 0.844 total
+```
 
 ## Problem 2
 
@@ -82,3 +78,17 @@ in the lecture notes. They are as follows:
    unmanaged nature that is having a basic spin lock. The guests should choose
    this strategy as it will prevent crowding and not upset the minotaur, as well
    as offer everyone a chance to see the vase.
+
+## How To Run
+
+Run the following commands for problem 1 and 2, respectively:
+
+```sh
+cd src && javac Problem2/Problem2.java
+java Problem2.Problem2 <number_of_guests>
+```
+
+```sh
+cd src && javac Problem1/Problem1.java
+java Problem1.Problem1 <number_of_guests>
+```
