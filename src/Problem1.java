@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Assignment2 {
+public class Problem1 {
     public static void main(String[] args) {
         int numGuests = Integer.parseInt(args[0]);
         Party party = new Party(numGuests);
@@ -85,6 +85,7 @@ class Maze {
 }
 
 class Guest {
+    // final int maxPartyTime = 150;
     AtomicBoolean invitedToTraverse;
     AtomicBoolean leave;
     Maze maze;
@@ -100,7 +101,10 @@ class Guest {
         while (true) {
             // enjoy the party ! :3
             while (!invitedToTraverse.get() && !leave.get()) {
-                long partyTime = (long) Math.random() * 20;
+                long partyTime = (long) (20.0 * Math.random());
+                // if (partyTime < maxPartyTime) {
+                // partyTime *= 1.5;
+                // }
                 Thread.sleep(partyTime);
             }
 
